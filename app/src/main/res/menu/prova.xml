@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search"
+        android:orderInCategory="1"
+        android:icon="@drawable/ic_search_black_24dp"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:title="@string/searcg"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/map"
+        android:orderInCategory="2"
+        android:icon="@drawable/ic_map_black_24dp"
+        android:title="@string/map"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/navigation_home"
+        android:orderInCategory="3"
+        android:icon="@drawable/ic_filter_list_black_24dp"
+        android:title="@string/filter"
+        app:showAsAction="ifRoom"/>
+
+</menu>

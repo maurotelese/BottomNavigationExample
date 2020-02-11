@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Bottom Navigation</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="profile">Profilo</string>
+    <string name="searcg">Cerca</string>
+    <string name="map">Mappa</string>
+    <string name="filter">Filtra</string>
+</resources>
