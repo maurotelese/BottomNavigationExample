@@ -4,12 +4,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
@@ -17,7 +19,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.quiriletelese.bottomnavigation.R;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements PopupMenu.OnMenuItemClickListener {
 
     private HomeViewModel homeViewModel;
 
@@ -41,7 +43,28 @@ public class HomeFragment extends Fragment {
         super.onCreateOptionsMenu(menu, inflater);
         menu.clear();
         inflater.inflate(R.menu.prova, menu);
-        SearchView searchView = (SearchView)menu.findItem(R.id.search).getActionView();
+        SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
         searchView.setMaxWidth(Integer.MAX_VALUE);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.filter:
+                break;
+            case R.id.all:
+            case R.id.restaurant:
+            case R.id.hotel:
+            case R.id.attractions:
+                item.setChecked(true);
+                break;
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onMenuItemClick(MenuItem item) {
+        item.setChecked(true);
+        return true;
     }
 }

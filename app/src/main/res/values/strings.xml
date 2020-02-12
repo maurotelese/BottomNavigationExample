@@ -7,4 +7,10 @@
     <string name="searcg">Cerca</string>
     <string name="map">Mappa</string>
     <string name="filter">Filtra</string>
+    <string name="distance">Distanza</string>
+    <string name="name">Nome</string>
+    <string name="all">Tutto</string>
+    <string name="restaurant">Ristoranti</string>
+    <string name="hotel">Hotel</string>
+    <string name="attractions">Attrazioni</string>
 </resources>

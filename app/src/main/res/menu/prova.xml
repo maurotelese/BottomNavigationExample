@@ -4,24 +4,48 @@
 
     <item
         android:id="@+id/search"
-        android:orderInCategory="1"
         android:icon="@drawable/ic_search_black_24dp"
-        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:orderInCategory="1"
         android:title="@string/searcg"
-        app:showAsAction="always"/>
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/map"
-        android:orderInCategory="2"
         android:icon="@drawable/ic_map_black_24dp"
+        android:orderInCategory="2"
         android:title="@string/map"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/navigation_home"
-        android:orderInCategory="3"
+        android:id="@+id/filter"
         android:icon="@drawable/ic_filter_list_black_24dp"
+        android:orderInCategory="3"
         android:title="@string/filter"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/all"
+                    android:title="@string/all"
+                    app:actionViewClass="android.widget.RadioButton" />
+
+                <item
+                    android:id="@+id/restaurant"
+                    android:title="@string/restaurant"
+                    app:actionViewClass="android.widget.RadioButton" />
+
+                <item
+                    android:id="@+id/hotel"
+                    android:title="@string/hotel"
+                    app:actionViewClass="android.widget.RadioButton" />
+
+                <item
+                    android:id="@+id/attractions"
+                    android:title="@string/attractions"
+                    app:actionViewClass="android.widget.RadioButton" />
+            </group>
+        </menu>
+    </item>
 
 </menu>
