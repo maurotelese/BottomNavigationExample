@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
@@ -19,7 +18,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.quiriletelese.bottomnavigation.R;
 
-public class HomeFragment extends Fragment implements PopupMenu.OnMenuItemClickListener {
+public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
 
@@ -42,7 +41,7 @@ public class HomeFragment extends Fragment implements PopupMenu.OnMenuItemClickL
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         menu.clear();
-        inflater.inflate(R.menu.prova, menu);
+        inflater.inflate(R.menu.main_menu, menu);
         SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
         searchView.setMaxWidth(Integer.MAX_VALUE);
     }
@@ -59,12 +58,6 @@ public class HomeFragment extends Fragment implements PopupMenu.OnMenuItemClickL
                 item.setChecked(true);
                 break;
         }
-        return true;
-    }
-
-    @Override
-    public boolean onMenuItemClick(MenuItem item) {
-        item.setChecked(true);
         return true;
     }
 }
